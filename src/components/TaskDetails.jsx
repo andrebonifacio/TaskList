@@ -1,16 +1,15 @@
 import React from "react";
-import { CgLoupe } from "react-icons/cg";
-import { useHistory, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import Button from "./Button";
 import "./TaskDetails.css";
 
 const TaskDetails = () => {
   const params = useParams();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleBackButtonClick = () => {
-    history.goBack();
+    navigate(-1);
   };
   return (
     <>
